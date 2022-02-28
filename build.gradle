@@ -5,7 +5,7 @@ plugins {
 group 'com.galvanize'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 11
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -15,5 +15,14 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile group: 'org.assertj', name: 'assertj-core-java8', version: '1.0.0m1'
     testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.0-RC1'
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.4.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.4.2")
+
 
 }
+
+test {
+    useJUnitPlatform()
+}
+
+
